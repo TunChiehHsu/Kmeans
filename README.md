@@ -1,3 +1,3 @@
 # Kmeans
 
-This repo provide a simple Kmeans algorithm with R. 
+This repo provides a simple Kmeans algorithm with R. 
