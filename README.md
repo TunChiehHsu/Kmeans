@@ -63,6 +63,6 @@ image(t(i2), col = grey(seq(0,1,length = 256)),axes = F,main = "K = 2")
 image(t(i4), col = grey(seq(0,1,length = 256)),axes = F,main = "K = 4")
 image(t(i6), col = grey(seq(0,1,length = 256)),axes = F,main = "K = 6")
 ```
-![alt text](https://raw.githubusercontent.com/TunChiehHsu/Kmeans/master/Rplot.pdf)
+![alt text](https://raw.githubusercontent.com/TunChiehHsu/Kmeans/master/Rplot.eps)
 
 
