@@ -12,3 +12,5 @@ A list of points in the plane where each point is represented by a latitude/long
 ## Output
 
 The clusters of points.
+
+![alt text](https://raw.githubusercontent.com/TunChiehHsu/Kmeans/master/raccoon.png)
