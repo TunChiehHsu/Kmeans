@@ -7,11 +7,11 @@ This repository a R implementation of k-means clustering algorithm.
 
 ## Input
 
-A list of points in the plane where each point is represented by a latitude/longitude pair.
+A matrix of paired points and number of cluster
 
 ## Output
 
-The clusters of points.
+The clusters of points and centers for each cluster
 
 
 
