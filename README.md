@@ -1,9 +1,8 @@
-# Kmeans
+# K-Means Clustering Algortihm
 
 ## General description
  
-K-Means Clustering Algortihm
-This repository a R implementation of k-means clustering algorithm.
+A R implementation of k-means clustering algorithm.
 
 ## Input
 
