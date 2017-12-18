@@ -6,7 +6,6 @@ env:
 
 # capturing state, early exit if no integration test is needed
 before_install:
-  - Rscript -e 'update.packages(.libPaths()[1], ask = FALSE)'
   - Rscript -e "if (!require('covr')) install.packages('covr')"
 
 
