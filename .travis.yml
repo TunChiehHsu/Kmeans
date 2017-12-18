@@ -4,16 +4,6 @@ env:
     - TARGET=travis
     - TARGET=integration DISPLAY=:99.0
 
-# capturing state, early exit if no integration test is needed
-before_install:
-  - Rscript -e "if (!require('covr')) install.packages('covr')"
-
-
-addons:
-  apt:
-    packages:
-    - libmpfr-dev
-  
   
 cache:
   packages: yes
