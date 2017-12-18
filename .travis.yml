@@ -1,0 +1,37 @@
+# environment variables
+env:
+  matrix:
+    - TARGET=travis
+    - TARGET=integration DISPLAY=:99.0
+
+# capturing state, early exit if no integration test is needed
+before_install:
+  - export PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+  - tlmgr update --self --all; mktexlsr
+  - tlmgr conf texmf TEXMFHOME $(Rscript -e "cat(file.path(R.home('share'), 'texmf'))")
+  - if [ ${TARGET} = integration ]; then
+      if ! make integration-need; then
+        echo "NOTE:"" Integration test skipped. To enable, create a branch named ${TRAVIS_BRANCH} in ${TRAVIS_REPO_SLUG}-examples.";
+        exit 0;
+      fi;
+    fi
+  - "curl https://xran.yihui.name/.gitconfig -o ~/.gitconfig"
+  - Rscript -e 'update.packages(.libPaths()[1], ask = FALSE)'
+  - Rscript -e "if (!require('covr')) install.packages('covr')"
+
+
+addons:
+  apt:
+    packages:
+    - libmpfr-dev
+  
+  
+cache:
+  packages: yes
+  directories:
+    - $HOME/cache
+
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+  - bash <(curl -s https://codecov.io/bash)
