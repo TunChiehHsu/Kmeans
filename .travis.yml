@@ -9,9 +9,4 @@ env:
     - TARGET=travis
     - TARGET=integration DISPLAY=:99.0
 
-  
-cache:
-  packages: yes
-  directories:
-    - $HOME/cache
 
