@@ -3,10 +3,6 @@ sudo: required
 dist: trusty
 group: deprecated-2017Q4
 
-before_install:
-  - Rscript -e "if (!require('covr')) install.packages('covr')"
-
-
 # environment variables
 env:
   matrix:
@@ -19,7 +15,3 @@ cache:
   directories:
     - $HOME/cache
 
-
-after_success:
-  - Rscript -e 'covr::codecov()'
-  - bash <(curl -s https://codecov.io/bash)
