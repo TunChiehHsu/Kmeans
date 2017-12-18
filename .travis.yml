@@ -1,3 +1,13 @@
+language: r
+sudo: required
+dist: trusty
+group: deprecated-2017Q4
+
+before_install:
+  - Rscript -e 'update.packages(.libPaths()[1], ask = FALSE)'
+  - Rscript -e "if (!require('covr')) install.packages('covr')"
+
+
 # environment variables
 env:
   matrix:
