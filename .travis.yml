@@ -1,12 +1,6 @@
 language: r
-sudo: required
+sudo: false
 dist: trusty
 group: deprecated-2017Q4
-
-# environment variables
-env:
-  matrix:
-    - TARGET=travis
-    - TARGET=integration DISPLAY=:99.0
 
 
