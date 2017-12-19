@@ -1,4 +1,5 @@
 # K-Means Clustering Algortihm
+[![Build Status](https://travis-ci.org/TunChiehHsu/Kmeans.svg?branch=master)](https://travis-ci.org/TunChiehHsu/Kmeans)
 
 ## General description
  
